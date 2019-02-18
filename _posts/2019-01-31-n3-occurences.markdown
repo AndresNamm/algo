@@ -7,8 +7,9 @@ title:  "FIND N3 OCCURENCES"
 
 
 
-+ [BASED ON INTERVIEWBIT](https://www.interviewbit.com/problems/n3-repeat-number/)
-
++ [Based on Interviewbit](https://www.interviewbit.com/problems/n3-repeat-number/)
++ [N3 repeat number](https://www.geeksforgeeks.org/n3-repeated-number-array-o1-space/)
++ [Majority element](https://www.geeksforgeeks.org/majority-element/)
 
 # PROBLEM
 
@@ -33,10 +34,15 @@ If there are multiple solutions, return any one.
 
 
 + To understand the solution you need to handle maintaining the data in top2 rather as a removal-process.
-+ Lets say in array there is an element **K** which is a top element and which occurs in the array more than $$\frac{n}{3}+1$$ times.
-+ From this it follows that the next most occuring element can occur maximum $$\frac{n}{3}$$ times which means that there can be maximum
-$$\frac{2n}{3}-1-\frac{n}{3}=\frac{n}{3}-1$$ unique combinations of three which is less than $$\frac{n}{3}+1$$ (The occurences of K)
-+ **If some element occurs more than unique combos it must exist in top2 after passing through the array a it has been removed less from top2 than it has been inserted to top2**
++ Lets say in array there is an element **K** which is a top element and which occurs in the array equal to or more than $$\frac{n}{3}+1$$ times.
++ From this it follows that the next most occuring element can occur maximum $$\frac{n}{3}+1$$ times which means that there can be maximum $$\frac{2n}{3}-2-\frac{n}{3}=\frac{n}{3}-2$$ unique combinations of three which is less than $$\frac{n}{3}+1$$ (The occurences of K)
+
+
++ **If some element occurs more than unique combos it must exist in top2 after passing through the array it has been removed less from top2 than it has been inserted to top2**
+
+## IDEAS
+
++ Can this problem be extended to $$\frac{n}{4},\frac{n}{5}$$.. ? Yes , if we extend the top2 to top3, top4.. Then in any removel we remove 4,5.. element instead of 3.
 
 
 ## CODE
